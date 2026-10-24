@@ -43,4 +43,3 @@ Close Looproom using the button at the bottom of the page. Move the **entire Loo
 ## Video engine license
 
 FFmpeg 7.1 is bundled from the imageio-ffmpeg 0.6.0 Windows wheel. See `THIRD_PARTY.md` and the included license notices. Looproom's source is included so you can customize it.
-

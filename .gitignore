@@ -1,0 +1,37 @@
+# Personal media, exports, database, and temporary render files stay local.
+data/
+Videos/
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite
+*.sqlite-*
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.aac
+*.ogg
+*.aiff
+*.aif
+*.gif
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.bmp
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+
+# Local Windows binary; install FFmpeg separately on deployment targets.
+bin/*.exe
+
+# Local environment and credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
