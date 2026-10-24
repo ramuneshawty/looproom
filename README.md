@@ -1,5 +1,7 @@
 # Looproom
 
+The original Windows desktop app lives at the repository root. The separate free, browser-rendering Cloudflare edition is in [cloud](cloud/README.md).
+
 A personal, offline music video studio for Windows.
 
 This source repository excludes personal media, exports, the local SQLite database, and the bundled Windows FFmpeg executable. To run this checkout on Windows, put a compatible `ffmpeg.exe` at `bin/ffmpeg.exe` first. The Desktop installation already contains that executable. This repository is the local application source; it is not yet a Cloudflare deployment.

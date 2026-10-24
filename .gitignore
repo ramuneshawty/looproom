@@ -28,6 +28,9 @@ __pycache__/
 
 # Local Windows binary; install FFmpeg separately on deployment targets.
 bin/*.exe
+cloud/node_modules/
+cloud/dist/
+cloud/.cloudflare/
 
 # Local environment and credentials.
 .env

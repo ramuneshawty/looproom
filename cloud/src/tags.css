@@ -1,0 +1,2 @@
+.tag-suggestions{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.tag-suggestions button{border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--accent);padding:5px 9px;font-size:11px}

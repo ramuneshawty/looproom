@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f3ed" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Looproom — live sequence studio</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><button id="themeButton" class="brandmark" title="Switch theme" aria-label="Switch theme">◒</button><span>looproom</span><small>OTM TELLAFRIEND · LAB</small></div>
+    <span class="top-note">LIVE SEQUENCE STUDIO · BROWSER EDITION</span>
+  </header>
+  <main class="layout">
+    <div class="left">
+      <section class="panel"><h2><b>01</b> Source material</h2><label class="dropzone" id="audioDrop"><strong>♫ &nbsp; Add your music</strong><span>Drop audio here or choose files · MP3, WAV, M4A + more</span><input id="audioInput" type="file" accept="audio/*,.mp3,.wav,.m4a,.flac,.ogg" multiple hidden></label><div id="audioList" class="track-list"></div></section>
+      <section class="panel"><div class="section-title"><h2><b>02</b> Artwork sequence</h2><span id="clipCount">0 clips</span></div><p class="hint">Drag clips to reorder, or use the arrows. The preview changes immediately and loops with your song.</p><div id="clipList" class="clip-list"></div><label class="add-clips" id="artDrop">＋ Add videos, GIFs or images<input id="artInput" type="file" accept="image/*,video/*,.gif,.mp4,.mov,.webm" multiple hidden></label></section>
+      <section class="panel"><h2><b>03</b> Release details</h2><label>Title <button class="copy" data-copy="title">Copy ↗</button><input id="title" maxlength="100" placeholder="Your track title"></label><label>Description <button class="copy" data-copy="description">Copy ↗</button><textarea id="description" rows="5" placeholder="The story behind the sound. Credits, links, and anything else."></textarea></label><label>Tags <button class="copy" data-copy="tags">Copy ↗</button><input id="tags" placeholder="Type tags, separated by commas"><span id="tagSuggestions" class="tag-suggestions"></span></label><p class="hint">Details and tag history are saved in this browser. Media files stay on your device.</p></section>
+    </div>
+    <div class="right">
+      <section class="panel preview-panel"><div class="eyebrow"><span>SYNCHRONIZED PREVIEW</span><span>LIVE SEQUENCE</span></div><div id="stage" class="stage"><span id="emptyStage">Add music and artwork to see your loop</span><video id="previewVideo" muted playsinline hidden></video><img id="previewImage" alt="Artwork preview" hidden></div><div class="preview-caption"><span id="previewTitle">Untitled</span><span id="previewRatio">16:9</span></div><audio id="player" controls></audio><p class="hint">Press play or seek to preview the music and artwork together. Your artwork stays muted.</p></section>
+      <section class="panel export-panel"><div class="section-title"><h2>Your loop</h2><span class="live-dot">● Live preview</span></div><p id="loopSummary" class="loop-summary">Add artwork to build a loop</p><p id="orderSummary" class="hint">Playback order will appear here.</p><div class="settings"><label>Resolution<select id="resolution"><option value="720">720p · Faster export</option><option value="1080">1080p · Full HD</option><option value="480">480p · Small file</option></select></label><label>Canvas<select id="ratio"><option value="16:9">16:9 · Landscape</option><option value="9:16">9:16 · Portrait</option><option value="1:1">1:1 · Square</option></select></label><label>Artwork framing<select id="framing"><option value="fit">Fit · Keep all artwork</option><option value="fill">Fill · Fullscreen crop</option></select></label></div><button id="exportButton" class="primary">Create video ↗</button><button id="cancelButton" class="secondary" hidden>Cancel export</button><div id="status" class="status" role="status">Choose music and artwork to begin.</div><progress id="progress" value="0" max="100" hidden></progress><div id="downloads"></div><p class="hint">Rendering happens in this browser. Keep this tab open until your download is ready. The first export downloads the video engine.</p></section>
+    </div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
